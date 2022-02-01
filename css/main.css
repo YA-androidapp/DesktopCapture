@@ -16,3 +16,16 @@ body {
     line-height: 60px;
     background-color: #f5f5f5;
 }
+
+/* Overlay */
+#overlay {
+    background-color: black;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    pointer-events: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}

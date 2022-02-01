@@ -164,6 +164,11 @@ function downloadImage(saveType) {
     }
 }
 
+const hideOverlay = () => {
+    const overlayElem = document.getElementById("overlay");
+    overlayElem.style.display = "none";
+}
+
 window.onload = function () {
     // 動作環境チェック
     if (typeof navigator.mediaDevices.getUserMedia !== 'undefined') {
@@ -171,6 +176,9 @@ window.onload = function () {
             downloadImage('png');
         }, false);
 
-        main();
+        document.getElementById("overlay").addEventListener("click", function () {
+            hideOverlay();
+            main();
+        }, false);
     }
 };
